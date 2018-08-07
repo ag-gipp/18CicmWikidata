@@ -3,11 +3,11 @@
 Dataset: MathMLben
 
 Workplanm:
-1) Convert all mathmlben formulae to strict cmml -> statics on cd groups and used symbols
-2) Find mappings for the used CD entries in arith1 to wikidata items
-3) put links to omcd repo as external identifiers in the entries
+1) Convert all mathmlben formulae to strict cmml -> statics on cd groups and used symbols (done)
+2) Find mappings for the used CD entries in arith1 to wikidata items (done)
+3) put links to omcd repo as external identifiers in the entries (waiting for approval)
 4) analyse all formulae in wikidata -> to strict cmml -> analyse used cds
-5) research about the editors of the formulae edits on wikidata using the edit history (optional)
+5) research about the editors of the formulae edits on wikidata using the edit history (optional, later)
 6) write paper
 
 
