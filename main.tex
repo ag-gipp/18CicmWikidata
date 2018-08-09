@@ -5,6 +5,57 @@
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+
+\usepackage{color}
+
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+
+\usepackage{listings}
+\usepackage{lstlinebgrd}
+\usepackage{graphics}
+
+\lstset{
+  extendedchars=true,
+%  basicstyle=\scriptsize,
+  basicstyle=\ttfamily,
+  showstringspaces=false,
+  showspaces=false,
+  numbers=left,
+  numberstyle=\scriptsize,
+  numbersep=7pt,
+  tabsize=2,
+  breaklines=true,
+  showtabs=false,
+  frame=single,
+  captionpos=b,
+  aboveskip=12pt,
+  belowskip=12pt
+}
+
+\lstdefinelanguage{XML}
+{
+  morecomment=[f][\color{red}]{-\ },         % deleted lines
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  morecomment=[s]{!--}{--},
+  morecomment=[s][\color{red}]{\$}{\$},
+  commentstyle=\color{darkgreen},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  %basicstyle=\footnotesize,
+  morecomment=[f][\color{green}]+,       % added lines
+  morekeywords={xmlns,version,type}% list your attributes here
+}
+
+
 %\usepackage[
 % backend=biber,
 % style=numeric,
@@ -42,7 +93,6 @@ By doing so, we link items in the Wikidata knowledge base to mathematical identi
 In contrast to other mathematical knowledge bases which define symbols in a deductive fashion, the terms in Wikidata emerged inductively from Wikipedia articles in different languages.
 To maximize the interoperability with non-strict content MathML, we create a Wikidata based content dictionary group.
 \end{abstract}
-
 \markdownInput{main.md}
 \paragraph*{Acknowledgments} We thank Wikimedia Foundation and Wikimedia Deutschland providing cloud computing facilities and for providing office space for us.
 This work was supported by the FITWeltweit program of the German Academic Exchange Service (DAAD) as well as the German Research Foundation (DFG grant GI-1259-1).

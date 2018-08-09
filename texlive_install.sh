@@ -87,7 +87,8 @@ tlmgr install   \
   media9        \
   latexmk       \
   logreq        \
-  xstring
+  xstring       \
+  lstaddons
 
 # Keep no backups (not required, simply makes cache bigger)
 tlmgr option -- autobackup 0
