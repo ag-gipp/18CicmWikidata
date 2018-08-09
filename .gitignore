@@ -1,3 +1,4 @@
+acmart-master
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -10,7 +11,6 @@
 *.fot
 *.cb
 *.cb2
-.*.lb
 
 ## Intermediate documents:
 *.dvi
@@ -110,14 +110,6 @@ acs-*.bib
 *.gaux
 *.gtex
 
-# htlatex
-*.4ct
-*.4tc
-*.idv
-*.lg
-*.trc
-*.xref
-
 # hyperref
 *.brf
 
@@ -153,9 +145,7 @@ _minted*
 *.mw
 
 # nomencl
-*.nlg
 *.nlo
-*.nls
 
 # pax
 *.pax
@@ -198,9 +188,6 @@ pythontex-files-*/
 # easy-todo
 *.lod
 
-# xmpincl
-*.xmpi
-
 # xindy
 *.xdy
 
@@ -238,5 +225,4 @@ TSWLatexianTemp*
 # standalone packages
 *.sta
 
-# generated if using elsarticle.cls
-*.spl
+_markdown_*
