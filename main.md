@@ -11,11 +11,6 @@ For example, we did not find a symbol for the logistic function $f(x) = \frac{L}
 semantic LaTeX macro \verb|\wf{Q190573}{\Gamma}| would associate the Wikidata entry for the gamma function with
 
 
-\input{img1.tex}
-
-\lstinputlisting[language=XML, firstline=264, firstnumber=264, lastline=277, caption= Definition for the $+$ symbol in \href{https://github.com/ag-gipp/MathMLben/blob/a41bfccf138eeedbe58d8feff475198d7de226cf/doc/cd-defs.xml#L264-L277}{wikidata.ocd}]{wikidata.ocd}
 
 
-\lstinputlisting[language=XML, firstline=1362, firstnumber=1362, lastline=1372, caption= Definition for the logistic function in \href{https://github.com/ag-gipp/MathMLben/blob/a41bfccf138eeedbe58d8feff475198d7de226cf/doc/cd-defs.xml#L1362-L1372}{wikidata.ocd}]{wikidata.ocd}
 
-\input{img2.tex}
