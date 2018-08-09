@@ -226,3 +226,7 @@ TSWLatexianTemp*
 *.sta
 
 _markdown_*
+
+main.pdf
+main.markdown.lua
+submission.zip

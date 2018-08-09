@@ -1,0 +1,50 @@
+\documentclass[a4paper]{article}
+\usepackage{onecolceurws}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+%\usepackage[
+% backend=biber,
+% style=numeric,
+% url=false,
+% isbn=false,
+% doi=false,
+% bibencoding=utf8
+%    ]{biblatex}
+%\addbibresource{main.bib}
+
+\usepackage[
+  citations=true,
+  hybrid=true
+   ]{markdown}
+\markdownSetup{
+  renderers = {
+    link = {\href{#2}{#1}}
+  }
+}
+\title{Representing Mathematical Formulae in Content MathML using Wikidata}
+\author{Moritz Schubotz \\
+ Dept.~of Computer and Information Science,\\
+ University of Konstanz, Box 76, 78464 Konstanz, Germany,\\
+ moritz.schubotz@uni-konstanz.de
+}
+\institution{}
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+We represent mathematical formulae in Content MathML referring to Wikidata as the knowledge base for the grounding of the semantics.
+By doing so, we link items in the Wikidata knowledge base to mathematical identifiers or operators.
+In contrast to other mathematical knowledge bases which define symbols in a deductive fashion, the terms in Wikidata emerged inductively from Wikipedia articles in different languages.
+To maximize the interoperability with non-strict content MathML, we create a Wikidata based content dictionary group.
+\end{abstract}
+
+\markdownInput{main.md}
+\paragraph*{Acknowledgments} We thank Wikimedia Foundation and Wikimedia Deutschland providing cloud computing facilities and for providing office space for us.
+This work was supported by the FITWeltweit program of the German Academic Exchange Service (DAAD) as well as the German Research Foundation (DFG grant GI-1259-1).
+%\printbibliography[keyword=primary]
+\end{document}
