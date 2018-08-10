@@ -94,6 +94,66 @@ In contrast to other mathematical knowledge bases which define symbols in a dedu
 To maximize the interoperability with non-strict content MathML, we create a Wikidata based content dictionary group.
 \end{abstract}
 \markdownInput{main.md}
+
+\begin{table}[p]
+\caption{Standard OpenMath IDs, their corresponding Wikidata labels, and the Wikidata `instance of' relation.}
+\vspace{2em}
+\label{tb.tb1}
+\begin{tabular}{p{.23\linewidth}cp{.5\linewidth}}
+\textbf{Wikidata Label} & \textbf{OpenMath ID} & \textbf{Instance of} \\
+\href{https://www.wikidata.org/entity/Q120812}{absolute value} & arith1\#abs & piecewise function, even function, idempotent function \\
+\href{https://www.wikidata.org/entity/Q1226939}{division} & arith1\#divide & binary operation \\
+\href{https://www.wikidata.org/entity/Q131752}{greatest common divisor} & arith1\#gcd & function \\
+\href{https://www.wikidata.org/entity/Q40754}{subtraction} & arith1\#minus & binary operation, operation \\
+\href{https://www.wikidata.org/entity/Q32043}{addition} & arith1\#plus & binary operation \\
+\href{https://www.wikidata.org/entity/Q33456}{exponentiation} & arith1\#power & operation \\
+\href{https://www.wikidata.org/entity/Q601053}{nth root} & arith1\#root & type of mathematical function, algebraic function \\
+\href{https://www.wikidata.org/entity/Q218005}{sum} & arith1\#sum & mathematical expression \\
+\href{https://www.wikidata.org/entity/Q40276}{multiplication} & arith1\#times & binary operation \\
+\href{https://www.wikidata.org/entity/Q715358}{opposite number} & arith1\#unary\_minus &  \\
+\href{https://www.wikidata.org/entity/Q29175}{derivative} & calculus1\#diff & unary operation, mathematical concept \\
+\href{https://www.wikidata.org/entity/Q6481163}{Lambda expression} & fns1\#lambda & Wikimedia disambiguation page \\
+\href{https://www.wikidata.org/entity/Q244761}{function composition} & fns1\#left\_compose & operator, operation \\
+\href{https://www.wikidata.org/entity/Q190573}{gamma function} & hypergeo0\#gamma & function \\
+\href{https://www.wikidata.org/entity/Q120976}{factorial} & integer1\#factorial & function \\
+\href{https://www.wikidata.org/entity/Q40548497}{range} & interval1\#interval\_oo & part \\
+\href{https://www.wikidata.org/entity/Q177239}{limit} & limit1\#limit & mathematical concept \\
+\href{https://www.wikidata.org/entity/Q204}{0} & limit1\#null & integer, Fibonacci number, triangular number, automorphic number, even number, non-negative integer, 0 number class, non-positive integer \\
+\href{https://www.wikidata.org/entity/Q178546}{determinant} & linalg1\#determinant & invariant \\
+\href{https://www.wikidata.org/entity/Q44337}{matrix} & linalg2\#matrix & array data structure, tensor \\
+\href{https://www.wikidata.org/entity/Q2916003}{row vector} & linalg2\#matrixrow & Row and column vectors \\
+\href{https://www.wikidata.org/entity/Q13471665}{vector} & linalg2\#vector & tensor \\
+\href{https://www.wikidata.org/entity/Q12139612}{list} & list1\#list & creative work \\
+\href{https://www.wikidata.org/entity/Q191081}{logical conjunction} & logic1\#and & logical connective, boolean function \\
+\href{https://www.wikidata.org/entity/Q130998}{equivalence relation} & logic1\#equivalent & transitive relation, symmetric relation, reflexive relation \\
+\href{https://www.wikidata.org/entity/Q82435}{e} & nums1\#e & real number, transcendental number, irrational number \\
+\href{https://www.wikidata.org/entity/Q193796}{imaginary unit} & nums1\#i & square root, mathematical constant, Gaussian integer, imaginary number \\
+\href{https://www.wikidata.org/entity/Q205}{infinity} & nums1\#infinity & mathematical concept \\
+\href{https://www.wikidata.org/entity/Q167}{pi} & nums1\#pi & real number, transcendental number, mathematical constant, irrational number \\
+\href{https://www.wikidata.org/entity/Q27058}{approximation} & relation1\#approx & relation, estimation \\
+\href{https://www.wikidata.org/entity/Q842346}{equality} & relation1\#eq & equivalence relation, partial order \\
+\href{https://www.wikidata.org/entity/Q55935291}{greater or equal to} & relation1\#geq & inequation \\
+\href{https://www.wikidata.org/entity/Q47035128}{greater than} & relation1\#gt & inequation \\
+\href{https://www.wikidata.org/entity/Q55935272}{less or equal to} & relation1\#leq & inequation \\
+\href{https://www.wikidata.org/entity/Q52834024}{less than} & relation1\#lt & inequation \\
+\href{https://www.wikidata.org/entity/Q21778965}{not equals to sign} & relation1\#neq & inequality sign \\
+\href{https://www.wikidata.org/entity/Q177646}{subset} & set1\#in & binary relation, subclass \\
+\href{https://www.wikidata.org/entity/Q185837}{intersection} & set1\#intersect & binary operation, set operation \\
+\href{https://www.wikidata.org/entity/Q36161}{set} & set1\#set & Wikidata metaclass, Wikidata metaclass, Wikidata metaclass, class (set theory), formalization, collection \\
+\href{https://www.wikidata.org/entity/Q720341}{arccosine} & transc1\#arccos & inverse trigonometric function, decreasing function \\
+\href{https://www.wikidata.org/entity/Q2257242}{arctangent} & transc1\#arctan & inverse trigonometric function, increasing function \\
+\href{https://www.wikidata.org/entity/Q1256164}{cosine} & transc1\#cos & trigonometric function, even function \\
+\href{https://www.wikidata.org/entity/Q1253682}{hyperbolic cosine} & transc1\#cosh & hyperbolic function, even function \\
+\href{https://www.wikidata.org/entity/Q47306354}{natural exponential function} & transc1\#exp & exponential function, type of mathematical function \\
+\href{https://www.wikidata.org/entity/Q204037}{natural logarithm} & transc1\#ln & type of mathematical function, logarithm \\
+\href{https://www.wikidata.org/entity/Q11197}{logarithm} & transc1\#log & type of mathematical function, type of mathematical function, multivalued function, elementary transcendental function \\
+\href{https://www.wikidata.org/entity/Q152415}{sine} & transc1\#sin & trigonometric function, odd function \\
+\href{https://www.wikidata.org/entity/Q1292101}{hyperbolic sine} & transc1\#sinh & hyperbolic function, odd function \\
+\href{https://www.wikidata.org/entity/Q1129196}{tangent} & transc1\#tan & trigonometric function \\
+\href{https://www.wikidata.org/entity/Q1274703}{hyperbolic tangent} & transc1\#tanh & hyperbolic function \\
+\end{tabular}
+\end{table}
+
 \paragraph*{Acknowledgments} We thank Wikimedia Foundation and Wikimedia Deutschland providing cloud computing facilities and for providing office space for us.
 This work was supported by the FITWeltweit program of the German Academic Exchange Service (DAAD) as well as the German Research Foundation (DFG grant GI-1259-1).
 %\printbibliography[keyword=primary]

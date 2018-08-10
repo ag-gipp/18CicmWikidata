@@ -4,13 +4,23 @@ Traditionally, mathematical formulae occur in a textual or situational context. 
 
 # The first version of a Wikidata Content Dictionary 
 
+\input{img1}
+
 A key feature our semantic LaTeX macros is that we linked symbols in the MathML to entries in Wikidata.
-For example, we did not find a symbol for the logistic function $f(x) = \frac{L}{1 + \mathrm e^{-k(x-x_0)}}$
-19 edits
+For example, we did not find a symbol for the logistic function $f(x) = \frac{L}{1 + \mathrm e^{-k(x-x_0)}}$ in the OpenMath content dictionaries.
+However, there are articles in many different languages in Wikipedia regarding the logistic function.
+Moreover, the Wikidata item  which connects all the Wikipedia articles in different version and was edified by 19 users excluding bots.
+Figure \ref{fg1} shows a screenshot of the wikidata item, including statements, external identifiers, and links to Wikipedia articles and other Wiki projects such as Wikisource Wikiversity that address the topic Logisitic function.
+In our gold standard we used the semantic LaTeX macro\footnote{
+  The difference beteen the macros `w` and `wf` is that `wf` associates the role function with a symbol.
+  For example, the first invisible operator in $f(a+b)$ is interpreted as function application rather than multiplication ,if `wf` is used.}
+ \verb|\wf{Q1052379}{f}| to encode that LaTeXML should treat the symbol $f$ as \verb|<csymbol cd=wikidata>Q1052379</csymbol>|.
+ parsed as the function application with would associate the Wikidata entry for the gamma function with
+\input{lst1}
 
-semantic LaTeX macro \verb|\wf{Q190573}{\Gamma}| would associate the Wikidata entry for the gamma function with
+\clearpage
+# Using wikidata as cdbase
 
+\input{img2}
 
-
-
-
+\input{lst2}
