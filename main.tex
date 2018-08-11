@@ -56,15 +56,15 @@
 }
 
 
-%\usepackage[
-% backend=biber,
-% style=numeric,
-% url=false,
-% isbn=false,
-% doi=false,
-% bibencoding=utf8
-%    ]{biblatex}
-%\addbibresource{main.bib}
+\usepackage[
+ backend=biber,
+ style=numeric,
+ url=false,
+ isbn=false,
+ doi=false,
+ bibencoding=utf8
+    ]{biblatex}
+\addbibresource{main.bib}
 
 \usepackage[
   citations=true,
@@ -89,21 +89,21 @@
 
 \begin{abstract}
 OpenMath content dictionaries are collections of mathematical symbols.
-Traditionally content dictionaries are handcrafted by experts.
-The OpenMath specification requires that each symbol in a dictionary has a name and a textual description in English.
+Traditionally, content dictionaries are handcrafted by experts.
+The OpenMath specification requires for each symbol in a dictionary a name and a textual description in English.
 In our recently published MathML benchmark (MathMLBen), we represent mathematical formulae in Content MathML referring to Wikidata as the knowledge base for the grounding of the semantics.
 Based on this benchmark, we present an OpenMath content dictionary, which we generated automatically from Wikidata.
-Our Wikidata content dictionary has 330 entries.
-We selected 280 entries during the creation of the benchmark.
+Our Wikidata content dictionary consists of 330 entries.
+We selected 280 entries during the creation of MathMLBen.
 50 entries correspond to already existing items in the official OpenMath content dictionary entries.
 To create these items, we proposed Wikidata property P5610.
 With this property, everyone can link OpenMath symbols and Wikidata items.
-By linking Wikidata and OpenMath data, the multilingual community maintained textual descriptions, links to Wikipedia articles and external links to other knowledge bases such as the Wolfram functions site is connected with the expert crafted OpenMath content dictionaries.
-Ultimately, these links form a new content dictionary group.
-This group provides multilingual background information for symbols in MathML formulae.
+By linking Wikidata and OpenMath data, the multilingual, community maintained textual descriptions, references to Wikipedia articles, external links to other knowledge bases (such as the Wolfram functions site) is connected to the expert crafted OpenMath content dictionaries.
+Ultimately, these connections form a new content dictionary base.
+This provides multilingual background information for symbols in MathML formulae.
 \end{abstract}
 \markdownInput{main.md}
-
+%\cite{So2006}
 \begin{table}[p]
 \caption{Standard OpenMath IDs, their corresponding Wikidata labels, and the Wikidata `instance of' relation.}
 \vspace{2em}
@@ -165,8 +165,14 @@ This group provides multilingual background information for symbols in MathML fo
 
 \paragraph*{Acknowledgments} We thank Wikimedia Foundation and Wikimedia Deutschland providing cloud computing facilities and for providing office space for us.
 This work was supported by the FITWeltweit program of the German Academic Exchange Service (DAAD) as well as the German Research Foundation (DFG grant GI-1259-1).
-%\printbibliography[keyword=primary]
+%\clearpage
+\printbibliography%[keyword=primary]
 \end{document}
+
+We obtained the list 330 as follows:
+After converting all valid formulae in MathMLBen to strict content MathML using MathTools, we obtained 4529 symbols.
+The most frequent symbols included complex and natural numbers and subclasses such as positive natural numbers.
+However, the main advantage of using Wikidata is the large variety of different symbols.
 
 XQuery lib
 Role distribution
@@ -191,6 +197,6 @@ group by ?item ?itemLabel ?value
 ORDER BY ?value
 LIMIT 1000
 
-OMCD mean length 131 words.
-wikidata mean length is 212 words. (14 words for reference)
 
+
+While the MathMLBen user interface fetches information from Wikidata in real time to support editors of the gold standard, the content dictionary can be used by third party software that has an interface to process MathML and OpenMath but is unaware of Wikidata.
