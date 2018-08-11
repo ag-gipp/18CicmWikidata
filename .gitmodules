@@ -1,3 +1,3 @@
 [submodule "CDs"]
 	path = CDs
-	url = git@github.com:OpenMath/CDs.git
+	url = https://github.com/OpenMath/CDs.git
