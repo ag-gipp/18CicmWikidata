@@ -47,3 +47,8 @@ This identifier labels OpenMath ID allows to refere to OpenMath sysmbols from wi
 That way, we connect both worlds Wikidata and OpenMath.
 Instead of mixing content symbols from Wikidata and OpenMath, one can now create a redirect sevice that redirects traditional MathML and OpenMath Ids such as `<plus>` which corresponds to `arith1#plus` with the associated Wikidata entry.
 Table \ref{tb1} list 50 of those connections.  
+
+#Conclusions and Future Works
+
+In this paper, we presented a collection of Wikidata entries and developed an alternative to the standard openmath content dictionary group.
+By doing so canonical symbols in MathML can be linked to 

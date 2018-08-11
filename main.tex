@@ -75,7 +75,7 @@
     link = {\href{#2}{#1}}
   }
 }
-\title{Representing Mathematical Formulae in Content MathML using Wikidata}
+\title{Generating OpenMath Content Dictionaries from Wikidata}
 \author{Moritz Schubotz \\
  Dept.~of Computer and Information Science,\\
  University of Konstanz, Box 76, 78464 Konstanz, Germany,\\
@@ -88,10 +88,19 @@
 \maketitle
 
 \begin{abstract}
-We represent mathematical formulae in Content MathML referring to Wikidata as the knowledge base for the grounding of the semantics.
-By doing so, we link items in the Wikidata knowledge base to mathematical identifiers or operators.
-In contrast to other mathematical knowledge bases which define symbols in a deductive fashion, the terms in Wikidata emerged inductively from Wikipedia articles in different languages.
-To maximize the interoperability with non-strict content MathML, we create a Wikidata based content dictionary group.
+OpenMath content dictionaries are collections of mathematical symbols.
+Traditionally content dictionaries are handcrafted by experts.
+The OpenMath specification requires that each symbol in a dictionary has a name and a textual description in English.
+In our recently published MathML benchmark (MathMLBen), we represent mathematical formulae in Content MathML referring to Wikidata as the knowledge base for the grounding of the semantics.
+Based on this benchmark, we present an OpenMath content dictionary, which we generated automatically from Wikidata.
+Our Wikidata content dictionary has 330 entries.
+We selected 280 entries during the creation of the benchmark.
+50 entries correspond to already existing items in the official OpenMath content dictionary entries.
+To create these items, we proposed Wikidata property P5610.
+With this property, everyone can link OpenMath symbols and Wikidata items.
+By linking Wikidata and OpenMath data, the multilingual community maintained textual descriptions, links to Wikipedia articles and external links to other knowledge bases such as the Wolfram functions site is connected with the expert crafted OpenMath content dictionaries.
+Ultimately, these links form a new content dictionary group.
+This group provides multilingual background information for symbols in MathML formulae.
 \end{abstract}
 \markdownInput{main.md}
 
@@ -158,3 +167,30 @@ To maximize the interoperability with non-strict content MathML, we create a Wik
 This work was supported by the FITWeltweit program of the German Academic Exchange Service (DAAD) as well as the German Research Foundation (DFG grant GI-1259-1).
 %\printbibliography[keyword=primary]
 \end{document}
+
+XQuery lib
+Role distribution
+for $x in //*:Role
+  group by $who := $x/string()
+
+return element res{$who,count($x)}
+
+http://tinyurl.com/ych2b93l
+
+SELECT ?item ?itemLabel ?value (GROUP_CONCAT(?classLabel; SEPARATOR=", ") as ?groupLabels)  (GROUP_CONCAT(?sclassLabel; SEPARATOR=", ") as ?sgroupLabels)  WHERE {
+  ?item wdt:P5610 ?value.
+  optional {?item wdt:P31 ?class.}.
+  optional {?item wdt:P279 ?sclass.}.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en".
+                          ?class rdfs:label ?classLabel.
+                                                    ?sclass rdfs:label ?sclassLabel.
+                         ?item rdfs:label ?itemLabel.} .
+}
+group by ?item ?itemLabel ?value
+
+ORDER BY ?value
+LIMIT 1000
+
+OMCD mean length 131 words.
+wikidata mean length is 212 words. (14 words for reference)
+
