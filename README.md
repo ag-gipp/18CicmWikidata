@@ -1,4 +1,5 @@
-[![DOI](https://zenodo.org/badge/XXX.svg)](https://zenodo.org/badge/latestdoi/XXX)
+[![DOI](https://zenodo.org/badge/142310332.svg)](https://zenodo.org/badge/latestdoi/142310332)
+
 # Generating OpenMath Content Dictionaries from Wikidata
 
 OpenMath content dictionaries are collections of mathematical symbols.
@@ -14,7 +15,8 @@ By linking Wikidata and OpenMath data, the multilingual community maintained tex
  expert crafted OpenMath content dictionaries.
 Ultimately, these connections form a new content dictionary base.
 This provides multilingual background information for symbols in MathML formulae.
-## About this git Repository
+
+## About this Git Repository
 
 This repository contains the source code of a system description paper, that was submitted to [CICM 2018](https://www.cicm-conference.org/2018/cicm.php).
 From this repository you can
